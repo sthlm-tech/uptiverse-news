@@ -16,9 +16,12 @@ function NewsService() {
 	self.getnews = function(){
 		var deferred = when.defer();
 
-		News.find(function(err, news) {
+
+		News.find({})
+		.sort({published: 'descending'})
+		.exec(function(err, news) {
 			deferred.resolve(news);
-	  });
+		});
 
 		return deferred.promise;
 	};
