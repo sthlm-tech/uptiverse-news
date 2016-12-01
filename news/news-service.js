@@ -34,6 +34,8 @@ function NewsService() {
 		news.text = in_news_data.text;
 		news.image = in_news_data.image;
 		news.published = in_news_data.published;
+		news.publisherId = in_news_data.publisherId;
+		news.publisher = in_news_data.publisher;
 
 		news.save(function(err, createdNews){
 			deferred.resolve(createdNews);
