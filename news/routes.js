@@ -1,5 +1,5 @@
-var App = require("./../core/core");
-var news = require("./news-service")	;
+var App = require("ms-core");
+var news = require("./news-service");
 
 var baseUrl = "/news"
 module.exports = function() {
