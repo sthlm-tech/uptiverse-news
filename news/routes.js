@@ -12,7 +12,7 @@ module.exports = function() {
 	});
 
 	App.Express.post( baseUrl + "/create", function (req, res) {
-			news.create(req.body.news)
+			news.create(req.body.news, req.user)
 			.then(function(response) {
 				res.send(response);
 			});

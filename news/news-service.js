@@ -16,16 +16,16 @@ function NewsService() {
 		return deferred.promise;
 	};
 
-	self.create = function(in_news_data){
+	self.create = function(in_news_data, user){
 		var deferred = when.defer();
 		var news = new News();
 
 		news.heading = in_news_data.heading;
 		news.text = in_news_data.text;
 		news.image = in_news_data.image;
-		news.published = in_news_data.published;
-		news.publisherId = in_news_data.publisherId;
-		news.publisher = in_news_data.publisher;
+		news.published = new Date();
+		news.publisherId = user.username;
+		news.publisher = user.name.firstname + " " + user.name.lastname;
 
 		news.save(function(err, createdNews){
 			deferred.resolve(createdNews);
