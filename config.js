@@ -12,3 +12,4 @@ module.exports = {
 		token: process.env.COMMUNICATOR_TOKEN || ""
 	}
 };
+console.log(process.env)
