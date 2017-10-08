@@ -1,11 +1,11 @@
 {
-  "name": "user",
+  "name": "uptiverse-news",
   "version": "1.0.0",
   "description": "user service",
   "main": "app.js",
   "dependencies": {
     "mongoose": "^4.5.10",
-    "ms-core": "^0.0.13",
+    "ms-core": "^0.0.17",
     "underscore": "^1.8.3",
     "when": "^3.7.7"
   },
