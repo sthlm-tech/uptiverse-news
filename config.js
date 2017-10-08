@@ -7,9 +7,9 @@ module.exports = {
 	pulse: {
 		shouldRegister:true,
 		serviceName: "uptiverse-news",
+		host: process.env.SERVICE_URL || "",
 		path:"/api/pulse",
 		communicatorUrl: process.env.COMMUNICATOR_URL || "",
 		token: process.env.COMMUNICATOR_TOKEN || ""
 	}
 };
-console.log(process.env)
