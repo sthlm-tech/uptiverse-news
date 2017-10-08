@@ -12,5 +12,3 @@ module.exports = {
 		token: process.env.COMMUNICATOR_TOKEN || ""
 	}
 };
-console.log("COMMUNICATOR_URL",process.env.COMMUNICATOR_URL)
-console.log("COMMUNICATOR_TOKEN",process.env.COMMUNICATOR_TOKEN)
