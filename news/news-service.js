@@ -1,3 +1,4 @@
+var App = require("ms-core");
 var News = require("./News");
 var when = require('when');
 function NewsService() {
@@ -29,6 +30,11 @@ function NewsService() {
 
 		news.save(function(err, createdNews){
 			deferred.resolve(createdNews);
+			App.Communicator.sendMessage(
+				"NEWS_CREATED",
+				"DATA_CHANGED",
+				{ "text": news.publisher + " posted: "+ "\n"  + news.heading + "\n" + news.text}
+			);
 		});
 
 		return deferred.promise;
